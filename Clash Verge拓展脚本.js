@@ -42,7 +42,7 @@ function main(config) {
     "name": "E-Hentai",
     "type": "select",
     "include-all": true, // 自动抓取机场的所有节点
-    "proxies": ["Proxies", "🎯Direct", "DIRECT"],
+    "proxies": ["Proxies", "DIRECT"],
     "icon": "https://raw.githubusercontent.com/GiliEye/Clash_rules/main/ehviewer_icon.png"
   });
 
