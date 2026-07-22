@@ -45,10 +45,10 @@ function main(config) {
     };
 
     // 优化：动态寻找插入位置，避免硬编码 20 导致可能的数组越界
-    let targetIndex = config['proxy-groups'].findIndex(g => g.name === "Proxies" || g.name === "PROXIES");
+    let targetIndex = config['proxy-groups'].findIndex(g => g.name === "Tiktok" || g.name === "TIKTOK");
     if (targetIndex !== -1) {
       // 如果找到了 Tiktok 分组，就把 E-Hentai 插在它后面
-      config['Tiktok'].splice(targetIndex + 1, 0, ehGroup);
+      config['proxy-groups'].splice(targetIndex + 1, 0, ehGroup);
     } else {
       // 如果没找到，稳妥起见插在第 2 个位置（通常紧随 GLOBAL 等全局分组之后）
       config['proxy-groups'].splice(2, 0, ehGroup); 
